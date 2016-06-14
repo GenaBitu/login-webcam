@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+line1="auth\t\[success\=2 default\=ignore\]\tpam_unix.so nullok_secure"
+line2="# Previous line was modified and next line added by login-webcam"
+line3="auth\t\[default\=ignore\]\t\tpam_exec.so seteuid \/usr\/bin\/login-webcam"
+replace="auth\t\[success\=1 default\=ignore\]\tpam_unix.so nullok_secure"
+
+case "$1" in
+    purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        rm -fr /var/log/login-webcam
+        sed -i "s/$line1/$replace/" /etc/pam.d/common-auth
+        sed -i "/$line2/d" /etc/pam.d/common-auth
+        sed -i "/$line3/d" /etc/pam.d/common-auth
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

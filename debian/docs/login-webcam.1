@@ -1,0 +1,17 @@
+.\" (C) Copyright 2016 GenaBitu <genabitu@gmail.com>,
+.TH login-webcam 1 "June 14 2016" "GPLv3"
+.SH NAME
+login-webcam \- Take picture on failed login
+.SH SYNOPSIS
+.B login-webcam
+.SH DESCRIPTION
+This Debian (Ubuntu) utility automatically takes pictures using your webcam
+on failed login. Pictures are taken on failed login attempts (wrong password)
+both from graphical and command-line interface. This command is used to take
+a photo from /dev/video0 and save it in /var/log/login-webcam. You should
+.B not
+call this command manually.
+.SH AUTHORS
+This program was created by GenaBitu<genabitu@gmail.com>, who is also the
+maintainer of the login-webcam package on Debian and Ubuntu.
+

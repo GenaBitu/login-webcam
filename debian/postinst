@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+
+search="auth\t\[success\=1 default\=ignore\]\tpam_unix.so nullok_secure"
+replace="auth\t\[success\=2 default\=ignore\]\tpam_unix.so nullok_secure\n# Previous line was modified and next line added by login-webcam\nauth\t\[default\=ignore\]\t\tpam_exec.so seteuid \/usr\/bin\/login-webcam"
+
+case "$1" in
+    configure)
+        sed -i -e "s/$search/$replace/" /etc/pam.d/common-auth
+        mkdir -p /var/log/login-webcam
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

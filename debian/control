@@ -1,0 +1,15 @@
+Source: login-webcam
+Section: misc
+Priority: optional
+Maintainer: GenaBitu <genabitu@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/GenaBitu/login-webcam
+
+Package: login-webcam
+Architecture: all
+Depends: ${misc:Depends}
+Description: Take picture on failed login
+ This Debian (Ubuntu) utility automatically takes pictures using your webcam
+ on failed login. Pictures are taken on failed login attempts (wrong password)
+ both from graphical and command-line interface.

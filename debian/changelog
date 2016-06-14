@@ -1,0 +1,5 @@
+login-webcam (1.0.0) unstable; urgency=low
+
+  * Initial Release (Closes: #827281)
+
+ -- GenaBitu <genabitu@gmail.com>  Tue, 14 Jun 2016 14:30:52 +0200
