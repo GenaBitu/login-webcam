@@ -1,5 +1,5 @@
-login-webcam (1.0.0) unstable; urgency=low
+login-webcam (1.0.0ubuntu1) xenial; urgency=low
 
-  * Initial Release (Closes: #827281)
+  * Initial Release
 
  -- GenaBitu <genabitu@gmail.com>  Tue, 14 Jun 2016 14:30:52 +0200
