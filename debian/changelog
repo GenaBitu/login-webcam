@@ -1,4 +1,4 @@
-login-webcam (1.0.2) unstable; urgency=medium
+login-webcam (1.0.2ubuntu1) xenial; urgency=medium
 
   * Script not failing when no /dev/video0 is present
 
