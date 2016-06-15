@@ -5,6 +5,8 @@ Maintainer: GenaBitu <genabitu@gmail.com>
 Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.7
 Homepage: https://github.com/GenaBitu/login-webcam
+Vcs-Browser: https://github.com/GenaBitu/login-webcam
+Vcs-Git: https://github.com/GenaBitu/login-webcam.git
 
 Package: login-webcam
 Architecture: all
