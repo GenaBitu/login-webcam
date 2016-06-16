@@ -4,5 +4,5 @@ time=$(date -I"seconds")
 
 source "./login-webcam.conf"
 
-ffmpeg -f video4linux2 -s $resolution -i $device -frames 1 "$log_path/$time.jpg" 2> /dev/null
+ffmpeg -f video4linux2 -s "$resolution" -i "$device" -frames 1 "$log_path/$time.jpg" 2> /dev/null
 exit 0
